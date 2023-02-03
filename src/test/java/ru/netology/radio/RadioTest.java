@@ -144,4 +144,44 @@ public class RadioTest {
         Radio radio = new Radio();
         Assertions.assertEquals(10, radio.getAmountStation());
     }
+
+    @Test
+    public void shouldSetCurrentVolume() {
+        radio.setCurrentVolume(100);
+        Assertions.assertEquals(100, radio.getCurrentVolume());
+
+    }
+
+    @Test
+    public void shouldSetAmountStation() {
+        radio.setAmountStation(10);
+        Assertions.assertEquals(10, radio.getAmountStation());
+
+    }
+
+    @Test
+    public void shouldSetMaxStation() {
+        radio.setMaxStation(10);
+        Assertions.assertEquals(10, radio.getMaxStation());
+
+    }
+
+    @Test
+    public void shouldSetMaxVolume() {
+        radio.setMaxVolume(100);
+        Assertions.assertEquals(100, radio.getMaxVolume());
+
+    }
+
+
+
+    @Test
+    public void shouldRadio() {
+        Radio radio = new Radio(10, 5, 10, 9, 100);
+        Assertions.assertEquals(10, radio.getCurrentVolume());
+        Assertions.assertEquals(5, radio.getCurrentStation());
+        Assertions.assertEquals(10, radio.getAmountStation());
+        Assertions.assertEquals(9, radio.getMaxStation());
+        Assertions.assertEquals(100, radio.getMaxVolume());
+    }
 }
