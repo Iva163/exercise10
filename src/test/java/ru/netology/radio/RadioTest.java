@@ -66,6 +66,19 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void shouldNextStationIfCurrentEight() {
+        Radio rad = new Radio();
+
+        rad.setCurrentStation(8);
+
+        rad.next();
+
+        int expected = 9;
+        int actual = rad.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void shouldPrevStation() {

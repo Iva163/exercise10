@@ -28,12 +28,12 @@ public class Radio {
     }
 
     public void next() {
-        if (currentStation < 9) {
+        if (currentStation >= 9) {
+            currentStation = 0;
+        } else {
             currentStation += 1;
         }
-        if (currentStation == 9) {
-            currentStation = 0;
-        }
+
     }
 
     public void prev() {
