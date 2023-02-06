@@ -66,6 +66,19 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldNextStationIfCurrentPenultimate() {
+
+        radio.setCurrentStation(radio.getMaxStation() - 1);
+
+        radio.next();
+
+        int expected = radio.getMaxStation();
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldPrevStation() {
 
         radio.prev();
