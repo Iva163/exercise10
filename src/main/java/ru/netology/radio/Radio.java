@@ -58,11 +58,10 @@ public class Radio {
     }
 
     public void next() {
-        if (currentStation < maxStation) {
-            currentStation += 1;
-        }
-        if (currentStation == maxStation) {
+        if (currentStation >= maxStation) {
             currentStation = 0;
+        } else {
+            currentStation += 1;
         }
     }
 
