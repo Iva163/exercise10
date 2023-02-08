@@ -93,6 +93,20 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldPrevStationIfCurrentOne() {
+        Radio rad = new Radio();
+
+        rad.setCurrentStation(1);
+
+        rad.prev();
+
+        int expected = 0;
+        int actual = rad.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldPrevStationIfCurrentAboveZero() {
         Radio rad = new Radio();
 
